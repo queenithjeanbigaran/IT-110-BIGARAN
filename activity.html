@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bigaran | HTML Activity 2</title>
+  </head>
+  <body>
+    <header>
+      <h1 id="main-heading">HTML Practical Application Activity</h1>
+      <nav id="site-nav">
+        <a href="#images">Images</a>
+        <a href="#hyperlinks">Hyperlinks</a>
+        <a href="#multimedia">Multimedia</a>
+        <a href="#useful-tags">Useful Tags</a>
+        <a href="#html-dom">HTML DOM</a>
+      </nav>
+    </header>
+
+    <main>
+      <section id="images">
+        <h2>Images</h2>
+
+        <img
+          src="images/birthday-enclosure.png"
+          alt="Glass enclosure of my favorite minecraft mobs for my birthday"
+          width="320px"
+        />
+
+        <img
+          src="images/stables.png"
+          alt="A stables for all color and variants of horses"
+          width="320px"
+        />
+
+        <figure>
+          <img
+            src="images/starter-base.png"
+            alt="A minecraft starter base"
+            width="320px"
+          />
+          <figcaption>A minecraft starter base where all it begun.</figcaption>
+        </figure>
+      </section>
+
+      <section id="hyperlinks">
+        <h2>Hyperlinks</h2>
+        <ul>
+          <li>
+            Internal link (to another page in this project):
+            <a href="gallery.html">View my full photo &amp; media gallery</a>
+          </li>
+          <li>
+            External link (opens in a new tab):
+            <a
+              href="https://developer.mozilla.org"
+              target="_blank"
+              rel="noopener noreferrer"
+              >MDN Web Docs</a
+            >
+          </li>
+          <li>
+            Email link:
+            <a href="mailto:queenithjean.bigaran@casu.edu.ph">Email me</a>
+          </li>
+          <li>
+            Same-page anchor link:
+            <a href="#html-dom">Jump down to the HTML DOM section</a>
+          </li>
+        </ul>
+      </section>
+
+      <section id="multimedia">
+        <h2>Multimedia</h2>
+
+        <p>Audio:</p>
+        <audio controls>
+          <source src="media/C418-MiceOnVenus.opus" type="audio/mpeg" />
+          Your browser does not support the audio element. You can
+          <a href="media/C418-MiceOnVenus.opus">download the audio file</a>
+          instead.
+        </audio>
+
+        <p>Video:</p>
+        <video controls width="400px">
+          <source src="media/world-tour.mp4" type="video/mp4" />
+          Your browser does not support the video element. You can
+          <a href="media/world-tour.mp4">download the video file</a> instead.
+        </video>
+      </section>
+
+      <section id="useful-tags">
+        <h2>Useful Tags</h2>
+
+        <!-- Using blockquote to set apart a quote from a source, distinct from my own writing -->
+        <blockquote>
+          "The Web does not just connect machines, it connects people." — Tim
+          Berners-Lee
+        </blockquote>
+
+        <!-- Using abbr so HTML is spelled out for anyone unfamiliar with the acronym -->
+        <p>
+          This project was built using
+          <abbr title="HyperText Markup Language">HTML</abbr> only, no
+          JavaScript.
+        </p>
+
+        <!-- Using mark to visually highlight the key requirement of this section -->
+        <p>
+          Every element below needed at least
+          <mark>three additional tags</mark> beyond the basics.
+        </p>
+
+        <!-- Using a character entity to correctly display a copyright symbol -->
+        <p>&copy; 2026 Quenith Jean. All rights reserved.</p>
+      </section>
+
+      <section id="html-dom">
+        <h2>HTML DOM</h2>
+        <p>
+          The HTML DOM is how the browser sees this page: not just text, but a
+          tree of elements nested inside each other, starting at
+          <code>&lt;html&gt;</code> and branching down into every tag on the
+          page. Giving an element an <code>id</code> makes it easy to find that
+          exact spot in the tree.
+        </p>
+
+        <figure>
+          <img
+            src="images/dom-tree.png"
+            alt="Screenshot of the DevTools Elements panel showing the nested DOM tree of this page"
+            width="600px"
+          />
+          <figcaption>
+            DevTools Elements panel showing the DOM tree for this page.
+          </figcaption>
+      </section>
+    </main>
+
+    <footer id="page-footer">
+      <p>
+        HTML Practical Application Activity &bull; Quenith Jean G. Bigaran
+        &bull; IT 110 - GWLM1
+      </p>
+    </footer>
+  </body>
+
+  <!--
+  Parent-child relationship notes (edit this after inspecting YOUR real DOM
+  in DevTools — replace the example below with what you actually see):
+ 
+  In DevTools, <main> is the parent of all five <section> elements
+  (images, hyperlinks, multimedia, useful-tags, html-dom), and they are its
+  children. Likewise, <header> is the parent of <h1 id="main-heading"> and
+  <nav id="site-nav">, making those two its children. This shows that
+  elements placed inside another tag in the HTML become that tag's children
+  in the DOM tree.
+  -->
+
+</html>
