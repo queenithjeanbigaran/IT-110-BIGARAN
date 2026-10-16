@@ -1,0 +1,174 @@
+/* 1. Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f7f6;
+  color: #24302d;
+  line-height: 1.6;
+  padding: 2rem 1rem;
+}
+
+h1,
+h2 {
+  color: #24302d;
+  text-align: center;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+}
+
+h2::before {
+  content: '';
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  background-color: #60a5fa;
+  border-radius: 50%;
+  margin-right: 8px;
+}
+
+/* 2. Header and Navigation */
+header,
+footer {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+nav {
+  margin-top: 1rem;
+}
+
+nav a {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  margin: 0.25rem;
+  color: #24302d;
+  background-color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: background-color 0.2s;
+}
+
+nav a:hover {
+  background-color: rgba(96, 165, 250, 0.2);
+}
+
+/* 3. Cards and Box Model */
+.card {
+  width: 500px;
+  max-width: 92%;
+  margin: 0 auto 1.25rem;
+  padding: 1.5rem;
+  background-color: white;
+  border: 1px solid #e1e6e3;
+  border-radius: 12px;
+}
+
+/* Total rendered width: 500px because border-box includes
+   the content, 48px of horizontal padding, and 2px of borders. */
+
+#about {
+  position: relative;
+  border-color: #60a5fa;
+  margin-top: 1rem;
+  padding-top: 2rem;
+}
+
+#about::after {
+  content: 'PROFILE';
+  position: absolute;
+  top: 8px;
+  right: 12px;
+  font-size: 0.65rem;
+  font-weight: bold;
+  color: #1d4ed8;
+  background-color: #dbeafe;
+  padding: 2px 8px;
+  border-radius: 10px;
+}
+
+/* 4. Text and Selectors */
+p {
+  color: #65716b;
+}
+
+/* This rule wins over p because .card p has higher specificity. */
+.card p {
+  color: rgb(57, 68, 62);
+  margin-bottom: 0.75rem;
+}
+
+.intro {
+  font-size: 1.05rem;
+  font-weight: 500;
+}
+
+.intro::first-letter {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #3b82f6;
+}
+
+/* 5. Skills and Visibility */
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.skills-list > li {
+  list-style: none;
+  background-color: #dbeafe;
+  color: #1d4ed8;
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  font-size: 0.9rem;
+}
+
+.hide-none {
+  display: none;
+}
+
+.hide-visibility {
+  visibility: hidden;
+}
+
+/* display: none removes the element and its space.
+   visibility: hidden hides the element but keeps its space. */
+
+/* 6. Scroll Box and Footer */
+.scroll-box {
+  height: 240px;
+  overflow: auto;
+}
+
+footer {
+  margin-top: 2rem;
+  margin-bottom: 0;
+  color: #65716b;
+  font-size: 0.85rem;
+}
+
+/* Reflection Answers
+
+1. The .card p rule wins because it is more specific than p.
+   CSS specificity determines which rule is applied.
+
+2. The total width is 550px with content-box.
+   This is 500px + 48px padding + 2px border.
+
+3. Use visibility: hidden to hide an element but keep its space.
+   Use display: none to hide it and remove its space.
+*/
